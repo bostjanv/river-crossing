@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>River Crossing</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header id="bar">
+      <button id="levels-btn" title="Levels (Esc)">☰<span class="label"> Levels</span></button>
+      <div id="title"><strong id="level-name"></strong><span id="level-info"></span></div>
+      <div class="actions">
+        <button id="undo" title="Undo (Z)">↶<span class="label"> Undo</span></button>
+        <button id="restart" title="Restart (R)">⟲<span class="label"> Restart</span></button>
+      </div>
+    </header>
+    <main id="stage"></main>
+    <p id="hint"></p>
+
+    <div id="levels" class="overlay hidden">
+      <div class="panel">
+        <button id="close-levels" class="close" aria-label="Close">✕</button>
+        <h1>River Crossing</h1>
+        <p>Help the Hiker cross the river to the <b>FINISH</b> stump.</p>
+        <ul class="rules">
+          <li>The Hiker walks only along planks. He can't jump.</li>
+          <li>He can pick up a plank that touches a stump he can reach, and carry one at a time.</li>
+          <li>A plank fits only between two stumps exactly its length apart, in a straight line, without crossing another plank.</li>
+        </ul>
+        <div id="level-list"></div>
+      </div>
+    </div>
+
+    <div id="win" class="overlay hidden">
+      <div class="panel win">
+        <h2>🎉 You made it across!</h2>
+        <p id="win-text"></p>
+        <div class="row">
+          <button id="win-levels">Levels</button>
+          <button id="next" class="primary">Next challenge →</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
