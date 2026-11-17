@@ -1,5 +1,7 @@
 # River Crossing
 
+Play it at https://bostjanv.github.io/river-crossing/
+
 A browser version of the River Crossing plank puzzle (TypeScript, PixiJS, Vite).
 Help the Hiker cross the river by moving planks between tree stumps.
 
@@ -20,3 +22,7 @@ npm run build
 ## Levels
 
 The 40 challenges in `src/levels.json` are original. `npm run generate-levels` creates them with a breadth-first solver (`src/game/solver.ts`) that finds the fewest plank moves. It sorts them into Beginner, Intermediate, Advanced, and Expert by that number.
+
+## Deployment
+
+Every push to `main` runs the tests and the build, then deploys `dist` to GitHub Pages (`.github/workflows/deploy.yml`). Pull requests run the tests and build only.
